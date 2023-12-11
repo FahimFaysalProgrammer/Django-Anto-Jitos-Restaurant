@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %} 
+{{block.super}}
+<section class="container">
+  <div
+    class="row container main-container d-flex align-items-center justify-content-center p-5"
+  >
+    <div class="text-container col-6 text-start">
+      <h3 style="font-size: 50px">Are you hungry?</h3>
+      <h1 style="font-size: 100px">Don't wait!</h1>
+      <p class="fs-3">Let start to order food now</p>
+      <button type="button" class="btn btn-outline-secondary px-4 py-2 fw-bold">
+        <a class="nav-link" href="/meal/">Check out menu</a>
+      </button>
+    </div>
+    <div class="img-container col-6">
+      <img class="w-100 p-4" src="{% static 'images/food.png' %}" alt="" />
+    </div>
+  </div>
+</section>
+{% endblock %}

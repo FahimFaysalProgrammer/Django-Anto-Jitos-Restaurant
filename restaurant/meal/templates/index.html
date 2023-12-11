@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %} {{block.super}}
+<!-- Card area start -->
+<section class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-5 p-5 mt-2">
+    {% for category in meals.categories %}
+    <div class="col-md-4">
+      <div class="card h-100 w-75">
+        <img
+          src="{{ category.strCategoryThumb }}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-id">{{ category.idCategory }}</h5>
+          <h5 class="card-title">{{ category.strCategory }}</h5>
+          <p class="card-text">
+            {{ category.strCategoryDescription|truncatewords:10 }}
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<!-- Card area start -->
+{% endblock %}
