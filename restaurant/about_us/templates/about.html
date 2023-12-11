@@ -1,8 +1,40 @@
-{% extends 'base.html' %} 
-
-
-{% block content %}
-{{block.super}}
-<div style="text-align: center; margin-top: 40px;"><h1>This is About us Page</h1></div>
-
+{% extends 'base.html' %} {% load static %} {% block content %} {{block.super}}
+<!-- section start -->
+<section class="container">
+  <div
+    class="row container main-container d-flex align-items-center justify-content-center p-5"
+  >
+    <div class="img-container col-6">
+      <img class="" src="{% static 'images/man.png' %}" alt="" />
+    </div>
+    <div
+      class="text-container col-6 text-start p-5"
+      style="border: 4px solid #c0602f; border-radius: 15px"
+    >
+      <h4>James</h4>
+      <h6 style="">CEO of Anto Jitos Restaurant</h6>
+      <p class="">
+        James serves as the dynamic force driving our restaurant's marketing
+        endeavors. In his role as the CEO, he brings a wealth of experience and
+        innovative strategies to the dining table. With a keen eye for culinary
+        trends and a deep understanding of customer preferences, James leads our
+        team with enthusiasm and vision. His commitment to culinary excellence
+        and his talent for turning ideas into successful promotions have helped
+        us reach new heights in the ever-evolving world of the restaurant
+        industry. James is not just a leader; he's a creative visionary who
+        continually pushes the boundaries of what's possible in the culinary
+        realm. Under his guidance, our restaurant's marketing efforts have
+        become synonymous with innovation and culinary success.
+      </p>
+      <button
+        style="border: 3px solid #c0602f"
+        type="button"
+        class="btn btn-outline-secondary px-4 py-2 fw-bold"
+      >
+        <a class="nav-link" href="#">Contact Me</a>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- section end -->
 {% endblock %}
